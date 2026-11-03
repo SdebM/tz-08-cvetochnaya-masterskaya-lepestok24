@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Мастерская «Флёр»">
+  <!-- Цвета сайта: нежно-розовый фон, малиновые лепестки, светлая сердцевина, зелёный стебель -->
+  <circle cx="16" cy="16" r="16" fill="#f8d7e2"/>
+  <path d="M16 31c0-5 .6-8 2.200-10.500" fill="none" stroke="#5f8a6b" stroke-width="2" stroke-linecap="round"/>
+  <g fill="#b3124f">
+    <circle cx="16" cy="8.500" r="5"/>
+    <circle cx="23.100" cy="13.700" r="5"/>
+    <circle cx="20.400" cy="22" r="5"/>
+    <circle cx="11.600" cy="22" r="5"/>
+    <circle cx="8.900" cy="13.700" r="5"/>
+  </g>
+  <circle cx="16" cy="16.500" r="4" fill="#fff8f5"/>
+  <circle cx="16" cy="16.500" r="1.600" fill="#b3124f"/>
+</svg>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница не найдена — вернуться к букетам</title>
+  <meta name="description" content="Такой страницы нет: возможно, адрес изменился или букет уже уехал к получателю. Вернитесь на главную или в каталог — там точно есть что выбрать.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#b3124f">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Мастерская «Флёр»">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Страница не найдена — вернуться к букетам">
+  <meta property="og:description" content="Такой страницы нет, но в каталоге мастерской «Флёр» точно есть что выбрать ко Дню матери.">
+  <meta property="og:image" content="https://fleur-mama.example/img/og-404.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Одинокий розовый тюльпан в стеклянной вазе на светлом фоне">
+  <meta property="og:url" content="https://fleur-mama.example/404.html">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/analytics.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ===== Шапка ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Мастерская «Флёр» — на главную">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <circle cx="16" cy="16" r="15" fill="#f8d7e2"/>
+          <g fill="#b3124f">
+            <circle cx="16" cy="9" r="4.5"/>
+            <circle cx="22.5" cy="14" r="4.5"/>
+            <circle cx="20" cy="21.5" r="4.5"/>
+            <circle cx="12" cy="21.5" r="4.5"/>
+            <circle cx="9.5" cy="14" r="4.5"/>
+          </g>
+          <circle cx="16" cy="16" r="3.5" fill="#fff8f5"/>
+        </svg>
+        <span>Флёр</span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span class="burger-line"></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+        <ul class="menu">
+          <li><a class="menu-link" href="index.html">Главная</a></li>
+          <li><a class="menu-link" href="catalog.html">Каталог</a></li>
+          <li><a class="menu-link" href="builder.html">Конструктор</a></li>
+          <li><a class="menu-link" href="delivery.html">Доставка</a></li>
+          <li><a class="menu-link" href="care.html">Уход</a></li>
+          <li><a class="menu-link" href="contacts.html">Заказать</a></li>
+          <li><a class="menu-link" href="thanks.html">Спасибо</a></li>
+          <li><a class="menu-link" href="privacy.html">Политика</a></li>
+        </ul>
+        <a class="btn btn-primary header-cta" href="contacts.html"
+           data-event="cta_click" data-event-label="header_order" data-event-location="header">Заказать</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Страница не найдена ===== -->
+    <section class="error-page" aria-labelledby="error-title">
+      <div class="container">
+        <p class="error-code" aria-hidden="true">404</p>
+        <h1 id="error-title"><span class="visually-hidden">Ошибка 404. </span>Такой страницы нет</h1>
+        <p class="lead">Возможно, букет уже уехал к получателю. Вернитесь в каталог — там точно есть что выбрать.</p>
+        <div class="error-actions">
+          <a class="btn btn-secondary" href="index.html"
+             data-event="cta_click" data-event-label="404_home" data-event-location="404">На главную</a>
+          <a class="btn btn-primary" href="catalog.html"
+             data-event="cta_click" data-event-label="404_catalog" data-event-location="404">В каталог</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Подвал ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">Мастерская «Флёр»</p>
+          <p>Собираем букеты вручную и привозим их по Москве. Ко Дню матери работаем без выходных.</p>
+        </div>
+
+        <div>
+          <p class="footer-title">Разделы</p>
+          <ul class="footer-list">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="builder.html">Конструктор букетов</a></li>
+            <li><a href="delivery.html">Доставка и оплата</a></li>
+            <li><a href="care.html">Уход за цветами</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-title">Контакты</p>
+          <address>
+            <ul class="footer-list">
+              <li><a href="tel:+74951234567" data-event="contact_click" data-event-method="phone">+7 (495) 123-45-67</a></li>
+              <li><a href="mailto:hello@fleur-mama.example" data-event="contact_click" data-event-method="email">hello@fleur-mama.example</a></li>
+              <li>Москва, ул. Садовая-Кудринская, 14, строение 2</li>
+            </ul>
+          </address>
+        </div>
+
+        <div>
+          <p class="footer-title">Мы в соцсетях</p>
+          <ul class="footer-list">
+            <li><a href="https://t.me/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="telegram">Telegram</a></li>
+            <li><a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="whatsapp">WhatsApp</a></li>
+            <li><a href="https://instagram.com/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-current-year>2026</span> Мастерская «Флёр». Все права защищены.</p>
+        <p>
+          <a href="privacy.html">Политика конфиденциальности</a>
+          ·
+          <a href="404.html">Проверить страницу 404</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
