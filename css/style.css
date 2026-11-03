@@ -1183,10 +1183,38 @@ select.form-control { appearance: auto; }
 
   .toast { left: auto; width: 360px; right: var(--space-5); bottom: var(--space-5); }
 
+  /* Меню остаётся бургером до 1280 px: 8 пунктов в одну строку на планшете не помещаются */
+}
+
+/* ==========================================================================
+   Десктоп: ≥ 1280 px
+   ========================================================================== */
+@media (min-width: 1280px) {
+  :root {
+    --fs-h1: 3rem;
+    --fs-h2: 2.125rem;
+    --container-pad: var(--space-6);
+  }
+
+  .section { padding: 88px 0; }
+
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .split-wide { grid-template-columns: 2fr 1fr; }
+
+  .hero { padding: 96px 0; }
+  .hero-inner { gap: var(--space-8); }
+
+  .steps { grid-template-columns: repeat(4, 1fr); }
+
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
+
   /* Горизонтальное меню вместо бургера */
   .burger { display: none; }
 
-  .main-nav {
+  .main-nav,
+  .main-nav.is-open {
     display: flex;
     align-items: center;
     position: static;
@@ -1227,36 +1255,6 @@ select.form-control { appearance: auto; }
     border-radius: 3px;
     background: var(--color-primary);
   }
-
-  .header-cta { display: none; }
-}
-
-/* ==========================================================================
-   Десктоп: ≥ 1280 px
-   ========================================================================== */
-@media (min-width: 1280px) {
-  :root {
-    --fs-h1: 3rem;
-    --fs-h2: 2.125rem;
-    --container-pad: var(--space-6);
-  }
-
-  .section { padding: 88px 0; }
-
-  .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-  .split-wide { grid-template-columns: 2fr 1fr; }
-
-  .hero { padding: 96px 0; }
-  .hero-inner { gap: var(--space-8); }
-
-  .steps { grid-template-columns: repeat(4, 1fr); }
-
-  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
-
-  .menu-link { padding: 0 var(--space-4); font-size: var(--fs-base); }
-  .menu-link.active::after { left: var(--space-4); right: var(--space-4); }
 
   .header-cta {
     display: inline-flex;

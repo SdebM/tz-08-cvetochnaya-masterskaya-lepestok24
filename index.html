@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Букеты ко Дню матери с доставкой — мастерская «Флёр»</title>
+  <meta name="description" content="Свежие букеты ко Дню матери с доставкой по Москве от 2 часов. Монобукеты, композиции в коробках, фото перед отправкой и анонимная доставка по запросу.">
+  <meta name="theme-color" content="#b3124f">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Мастерская «Флёр»">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Букеты ко Дню матери с доставкой — мастерская «Флёр»">
+  <meta property="og:description" content="Свежие букеты ко Дню матери с доставкой по Москве от 2 часов. Фото букета перед отправкой, анонимная доставка по запросу.">
+  <meta property="og:image" content="https://fleur-mama.example/img/og-index.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Букет розовых тюльпанов и пионовидных роз в крафтовой упаковке">
+  <meta property="og:url" content="https://fleur-mama.example/index.html">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ===== Шапка ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Мастерская «Флёр» — на главную">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <circle cx="16" cy="16" r="15" fill="#f8d7e2"/>
+          <g fill="#b3124f">
+            <circle cx="16" cy="9" r="4.5"/>
+            <circle cx="22.5" cy="14" r="4.5"/>
+            <circle cx="20" cy="21.5" r="4.5"/>
+            <circle cx="12" cy="21.5" r="4.5"/>
+            <circle cx="9.5" cy="14" r="4.5"/>
+          </g>
+          <circle cx="16" cy="16" r="3.5" fill="#fff8f5"/>
+        </svg>
+        <span>Флёр</span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span class="burger-line"></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+        <ul class="menu">
+          <li><a class="menu-link active" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="menu-link" href="catalog.html">Каталог</a></li>
+          <li><a class="menu-link" href="builder.html">Конструктор</a></li>
+          <li><a class="menu-link" href="delivery.html">Доставка</a></li>
+          <li><a class="menu-link" href="care.html">Уход</a></li>
+          <li><a class="menu-link" href="contacts.html">Заказать</a></li>
+          <li><a class="menu-link" href="thanks.html">Спасибо</a></li>
+          <li><a class="menu-link" href="privacy.html">Политика</a></li>
+        </ul>
+        <a class="btn btn-primary header-cta" href="contacts.html"
+           data-event="cta_click" data-event-label="header_order" data-event-location="header">Заказать</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Первый экран ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title" id="hero-title">Букеты ко Дню матери с доставкой по Москве</h1>
+          <p class="hero-text">Свежие цветы, аккуратная упаковка и открытка с вашими словами. Привезём мамину радость прямо к двери — уже через 2 часа после заказа.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="catalog.html"
+               data-event="cta_click" data-event-label="hero_catalog" data-event-location="hero">Выбрать букет</a>
+            <a class="btn btn-secondary" href="builder.html"
+               data-event="cta_click" data-event-label="hero_builder" data-event-location="hero">Собрать свой букет</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="img/hero-mother-day.jpg" width="1200" height="800" fetchpriority="high"
+               alt="Пышный букет из розовых тюльпанов и пионовидных роз в крафтовой бумаге на кухонном столе рядом с чашкой чая">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Категории ===== -->
+    <section class="section" id="categories" aria-labelledby="categories-title">
+      <div class="container">
+        <h2 class="section-title" id="categories-title">Выберите формат подарка</h2>
+        <p class="section-lead">Четыре способа сказать маме «спасибо»: от одного любимого цветка до большой композиции в шляпной коробке.</p>
+
+        <div class="grid grid-4">
+          <article class="card">
+            <div class="card-media">
+              <img src="img/category-mono.jpg" width="640" height="480" loading="lazy"
+                   alt="Монобукет из двадцати пяти розовых тюльпанов, перевязанный лентой">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Монобукеты</h3>
+              <p class="card-text">Один сорт цветов — тюльпаны, розы или хризантемы. Лаконично и всегда к месту.</p>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="catalog.html?cat=mono"
+                   data-event="catalog_filter" data-event-category="mono" data-event-location="categories">Смотреть монобукеты</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="img/category-mixed.jpg" width="640" height="480" loading="lazy"
+                   alt="Сборный букет из кустовых роз, эвкалипта и ранункулюсов в нежных тонах">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Сборные букеты</h3>
+              <p class="card-text">Несколько видов цветов и зелени, подобранных флористом по цвету и настроению.</p>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="catalog.html?cat=mixed"
+                   data-event="catalog_filter" data-event-category="mixed" data-event-location="categories">Смотреть сборные</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="img/category-box.jpg" width="640" height="480" loading="lazy"
+                   alt="Белые розы и эустома в прямоугольной дизайнерской коробке с атласной лентой">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Букеты в коробке</h3>
+              <p class="card-text">Цветы на влажной подложке в прочной коробке: удобно нести и дарить без вазы.</p>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="catalog.html?cat=box"
+                   data-event="catalog_filter" data-event-category="box" data-event-location="categories">Смотреть в коробках</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="img/category-hatbox.jpg" width="640" height="480" loading="lazy"
+                   alt="Круглая шляпная коробка, полная пионовидных роз и зелени">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Композиции в шляпной коробке</h3>
+              <p class="card-text">Пышные цветочные шапки в круглой коробке — самый эффектный вариант к празднику.</p>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="catalog.html?cat=hatbox"
+                   data-event="catalog_filter" data-event-category="hatbox" data-event-location="categories">Смотреть композиции</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Хиты недели ===== -->
+    <section class="section section-alt" id="hits" aria-labelledby="hits-title">
+      <div class="container">
+        <h2 class="section-title" id="hits-title">Хиты недели</h2>
+        <p class="section-lead">Эти букеты чаще всего заказывают ко Дню матери. Состав и цена указаны точно — без сюрпризов при получении.</p>
+
+        <div class="grid grid-3">
+          <article class="card" data-item-id="b-101" data-item-name="Нежность утра" data-price="3490" data-category="Монобукеты">
+            <div class="card-media">
+              <img src="img/bouquet-tulips-pink.jpg" width="640" height="480" loading="lazy"
+                   alt="Букет «Нежность утра» из двадцати пяти розовых тюльпанов в крафтовой бумаге">
+              <span class="badge badge-primary">Хит</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Нежность утра</h3>
+              <p class="card-text">Состав: 25 розовых тюльпанов, крафтовая бумага, атласная лента.</p>
+              <p class="card-price">3&nbsp;490&nbsp;₽</p>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="contacts.html?item_id=b-101&amp;item_name=Нежность%20утра&amp;price=3490"
+                   data-select-item data-event="cta_click" data-event-label="hit_order" data-event-item-id="b-101">Заказать</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-item-id="b-102" data-item-name="Тёплые объятия" data-price="4290" data-category="Сборные букеты">
+            <div class="card-media">
+              <img src="img/bouquet-roses-eucalyptus.jpg" width="640" height="480" loading="lazy"
+                   alt="Букет «Тёплые объятия» из кустовых роз, ранункулюсов и веточек эвкалипта">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Тёплые объятия</h3>
+              <p class="card-text">Состав: кустовая роза, ранункулюс, эвкалипт, фисташка.</p>
+              <p class="card-price">4&nbsp;290&nbsp;₽</p>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="contacts.html?item_id=b-102&amp;item_name=Тёплые%20объятия&amp;price=4290"
+                   data-select-item data-event="cta_click" data-event-label="hit_order" data-event-item-id="b-102">Заказать</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-item-id="b-103" data-item-name="Мамина любимая" data-price="6790" data-category="Композиции в шляпной коробке">
+            <div class="card-media">
+              <img src="img/bouquet-hatbox-peony-roses.jpg" width="640" height="480" loading="lazy"
+                   alt="Композиция «Мамина любимая» из пятнадцати пионовидных роз в круглой шляпной коробке">
+              <span class="badge badge-primary">Хит</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Мамина любимая</h3>
+              <p class="card-text">Состав: 15 пионовидных роз, лизиантус, зелень, шляпная коробка.</p>
+              <p class="card-price">6&nbsp;790&nbsp;₽</p>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="contacts.html?item_id=b-103&amp;item_name=Мамина%20любимая&amp;price=6790"
+                   data-select-item data-event="cta_click" data-event-label="hit_order" data-event-item-id="b-103">Заказать</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-item-id="b-104" data-item-name="Лавандовый вечер" data-price="3990" data-category="Сборные букеты">
+            <div class="card-media">
+              <img src="img/bouquet-lavender-evening.jpg" width="640" height="480" loading="lazy"
+                   alt="Букет «Лавандовый вечер» из сиреневой эустомы, хризантем сантини и веточек лаванды">
+              <span class="badge">Новинка</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Лавандовый вечер</h3>
+              <p class="card-text">Состав: эустома, хризантема сантини, лаванда, эвкалипт.</p>
+              <p class="card-price">3&nbsp;990&nbsp;₽</p>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="contacts.html?item_id=b-104&amp;item_name=Лавандовый%20вечер&amp;price=3990"
+                   data-select-item data-event="cta_click" data-event-label="hit_order" data-event-item-id="b-104">Заказать</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-item-id="b-105" data-item-name="Белый шёлк" data-price="5490" data-category="Букеты в коробке">
+            <div class="card-media">
+              <img src="img/bouquet-white-box.jpg" width="640" height="480" loading="lazy"
+                   alt="Коробка «Белый шёлк» с белыми розами, эустомой и лизиантусом">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Белый шёлк</h3>
+              <p class="card-text">Состав: белая роза, эустома, лизиантус, дизайнерская коробка.</p>
+              <p class="card-price">5&nbsp;490&nbsp;₽</p>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="contacts.html?item_id=b-105&amp;item_name=Белый%20шёлк&amp;price=5490"
+                   data-select-item data-event="cta_click" data-event-label="hit_order" data-event-item-id="b-105">Заказать</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-item-id="b-106" data-item-name="Осенний янтарь" data-price="4690" data-category="Сборные букеты">
+            <div class="card-media">
+              <img src="img/bouquet-autumn-amber.jpg" width="640" height="480" loading="lazy"
+                   alt="Букет «Осенний янтарь» из оранжевых роз, хризантем и декоративной травы">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Осенний янтарь</h3>
+              <p class="card-text">Состав: роза «Мандарин», хризантема, берграсс, зелень.</p>
+              <p class="card-price">4&nbsp;690&nbsp;₽</p>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="contacts.html?item_id=b-106&amp;item_name=Осенний%20янтарь&amp;price=4690"
+                   data-select-item data-event="cta_click" data-event-label="hit_order" data-event-item-id="b-106">Заказать</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="text-center mt-6">
+          <a class="btn btn-secondary" href="catalog.html"
+             data-event="cta_click" data-event-label="hits_all_catalog" data-event-location="hits">Весь каталог</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Как мы доставляем ===== -->
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <h2 class="section-title" id="how-title">Как мы доставляем</h2>
+        <p class="section-lead">Мы отвечаем за то, чтобы букет приехал таким, каким вы его выбрали.</p>
+
+        <div class="grid grid-4">
+          <div class="feature">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"/><path d="M5 19c3-4 6-7 10-9"/>
+              </svg>
+            </span>
+            <div>
+              <h3>Свежие цветы каждое утро</h3>
+              <p class="text-small text-muted">Поставки приходят до рассвета, и мы собираем букеты только из свежих срезов.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+            </span>
+            <div>
+              <h3>Доставка от 2 часов</h3>
+              <p class="text-small text-muted">По Москве привезём в удобный интервал — можно выбрать время с точностью до часа.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>
+              </svg>
+            </span>
+            <div>
+              <h3>Фото букета перед отправкой</h3>
+              <p class="text-small text-muted">Пришлём снимок готового букета в мессенджер — вы убедитесь, что всё как задумано.</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>
+              </svg>
+            </span>
+            <div>
+              <h3>Анонимная доставка по запросу</h3>
+              <p class="text-small text-muted">Курьер не назовёт отправителя, а открытку можно оставить без подписи.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Подвал ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">Мастерская «Флёр»</p>
+          <p>Собираем букеты вручную и привозим их по Москве. Ко Дню матери работаем без выходных.</p>
+        </div>
+
+        <div>
+          <p class="footer-title">Разделы</p>
+          <ul class="footer-list">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="builder.html">Конструктор букетов</a></li>
+            <li><a href="delivery.html">Доставка и оплата</a></li>
+            <li><a href="care.html">Уход за цветами</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-title">Контакты</p>
+          <address>
+            <ul class="footer-list">
+              <li><a href="tel:+74951234567" data-event="contact_click" data-event-method="phone">+7 (495) 123-45-67</a></li>
+              <li><a href="mailto:hello@fleur-mama.example" data-event="contact_click" data-event-method="email">hello@fleur-mama.example</a></li>
+              <li>Москва, ул. Садовая-Кудринская, 14, строение 2</li>
+            </ul>
+          </address>
+        </div>
+
+        <div>
+          <p class="footer-title">Мы в соцсетях</p>
+          <ul class="footer-list">
+            <li><a href="https://t.me/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="telegram">Telegram</a></li>
+            <li><a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="whatsapp">WhatsApp</a></li>
+            <li><a href="https://instagram.com/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-current-year>2026</span> Мастерская «Флёр». Все права защищены.</p>
+        <p>
+          <a href="privacy.html">Политика конфиденциальности</a>
+          ·
+          <a href="404.html">Проверить страницу 404</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/analytics.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* Ecommerce-события блока «Хиты недели»: view_item и select_item */
+    (function () {
+      'use strict';
+
+      const LIST_ID = 'weekly_hits';
+      const LIST_NAME = 'Хиты недели';
+      const cards = Array.from(document.querySelectorAll('#hits [data-item-id]'));
+
+      function buildItem(card) {
+        return {
+          item_id: card.dataset.itemId,
+          item_name: card.dataset.itemName,
+          item_category: card.dataset.category,
+          price: Number(card.dataset.price),
+          quantity: 1,
+          index: cards.indexOf(card) + 1,
+          item_list_id: LIST_ID,
+          item_list_name: LIST_NAME
+        };
+      }
+
+      function sendEcommerce(eventName, card) {
+        if (typeof window.trackEcommerce !== 'function') {
+          return;
+        }
+        const item = buildItem(card);
+        window.trackEcommerce(eventName, {
+          currency: 'RUB',
+          value: item.price * item.quantity,
+          items: [item]
+        });
+      }
+
+      // select_item — клик по кнопке «Заказать» у товара
+      document.addEventListener('click', function (e) {
+        const btn = e.target.closest('[data-select-item]');
+        const card = btn && btn.closest('[data-item-id]');
+        if (card) {
+          sendEcommerce('select_item', card);
+        }
+      });
+
+      // view_item — карточка попала в зону видимости (один раз на карточку)
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              sendEcommerce('view_item', entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        cards.forEach(function (card) { observer.observe(card); });
+      } else {
+        cards.forEach(function (card) { sendEcommerce('view_item', card); });
+      }
+    })();
+  </script>
+</body>
+</html>

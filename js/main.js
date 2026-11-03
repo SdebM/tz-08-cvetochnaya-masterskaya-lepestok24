@@ -138,7 +138,8 @@
       return;
     }
 
-    const desktopQuery = window.matchMedia('(min-width: 768px)');
+    // Горизонтальное меню включается с 1280 px (см. style.css)
+    const desktopQuery = window.matchMedia('(min-width: 1280px)');
 
     function setOpen(open) {
       nav.classList.toggle('is-open', open);
