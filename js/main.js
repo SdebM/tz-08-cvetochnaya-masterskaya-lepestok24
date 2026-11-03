@@ -122,6 +122,12 @@
         return;
       }
 
+      // Элементы с data-ecommerce отправляют событие сами (страничный скрипт),
+      // чтобы не получить дубль, например select_item без ecommerce-данных.
+      if (el.hasAttribute('data-ecommerce')) {
+        return;
+      }
+
       const eventName = (el.dataset.event || '').trim();
       if (eventName) {
         send(eventName, collectParams(el));
