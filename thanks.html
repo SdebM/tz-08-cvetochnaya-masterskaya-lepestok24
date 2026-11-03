@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Спасибо за заказ — букет уже собираем</title>
+  <meta name="description" content="Заказ принят: мы уже собираем ваш букет. Менеджер свяжется с вами в течение 15 минут, подтвердит детали и пришлёт фото букета перед доставкой.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#b3124f">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Мастерская «Флёр»">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Спасибо за заказ — букет уже собираем">
+  <meta property="og:description" content="Мы уже собираем ваш букет ко Дню матери. Менеджер свяжется с вами в течение 15 минут.">
+  <meta property="og:image" content="https://fleur-mama.example/img/og-thanks.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Готовый букет из розовых тюльпанов и роз, перевязанный лентой, на столе мастерской">
+  <meta property="og:url" content="https://fleur-mama.example/thanks.html">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/analytics.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ===== Шапка ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Мастерская «Флёр» — на главную">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <circle cx="16" cy="16" r="15" fill="#f8d7e2"/>
+          <g fill="#b3124f">
+            <circle cx="16" cy="9" r="4.5"/>
+            <circle cx="22.5" cy="14" r="4.5"/>
+            <circle cx="20" cy="21.5" r="4.5"/>
+            <circle cx="12" cy="21.5" r="4.5"/>
+            <circle cx="9.5" cy="14" r="4.5"/>
+          </g>
+          <circle cx="16" cy="16" r="3.5" fill="#fff8f5"/>
+        </svg>
+        <span>Флёр</span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span class="burger-line"></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+        <ul class="menu">
+          <li><a class="menu-link" href="index.html">Главная</a></li>
+          <li><a class="menu-link" href="catalog.html">Каталог</a></li>
+          <li><a class="menu-link" href="builder.html">Конструктор</a></li>
+          <li><a class="menu-link" href="delivery.html">Доставка</a></li>
+          <li><a class="menu-link" href="care.html">Уход</a></li>
+          <li><a class="menu-link" href="contacts.html">Заказать</a></li>
+          <li><a class="menu-link active" href="thanks.html" aria-current="page">Спасибо</a></li>
+          <li><a class="menu-link" href="privacy.html">Политика</a></li>
+        </ul>
+        <a class="btn btn-primary header-cta" href="contacts.html"
+           data-event="cta_click" data-event-label="header_order" data-event-location="header">Заказать</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Благодарность ===== -->
+    <section class="thanks-hero" aria-labelledby="thanks-title">
+      <div class="container">
+        <span class="thanks-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12.5l4.500 4.500L19 7.500"/>
+          </svg>
+        </span>
+        <h1 id="thanks-title">Спасибо за заказ!</h1>
+
+        <div class="order-badge">
+          <span class="order-badge-label" id="order-label">Номер заказа</span>
+          <span class="order-number" id="order-number" aria-labelledby="order-label">M-2026-0001</span>
+        </div>
+
+        <p class="lead">Мы уже собираем ваш букет. Менеджер свяжется с вами в течение 15 минут.</p>
+      </div>
+    </section>
+
+    <!-- ===== Что дальше ===== -->
+    <section class="section" aria-labelledby="next-heading">
+      <div class="container">
+        <h2 class="section-title" id="next-heading">Что дальше</h2>
+        <p class="section-lead">Три шага отделяют вас от радости мамы. Сохраните номер заказа — он понадобится, если захотите что-то уточнить.</p>
+
+        <ol class="steps thanks-steps" role="list">
+          <li>
+            <h3>Подтверждаем заказ по телефону</h3>
+            <p class="text-muted">Менеджер позвонит на номер, который вы указали, и уточнит адрес, время доставки и текст открытки.</p>
+          </li>
+          <li>
+            <h3>Собираем букет и присылаем фото перед доставкой</h3>
+            <p class="text-muted">Флорист соберёт букет вручную из свежих цветов. Вы увидите фото и сможете попросить поправить композицию.</p>
+          </li>
+          <li>
+            <h3>Доставляем в выбранный интервал и присылаем уведомление</h3>
+            <p class="text-muted">Курьер позвонит за 30 минут до приезда, а мы сообщим вам, когда букет окажется у получателя.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Поделиться ===== -->
+    <section class="section section-alt" aria-labelledby="share-heading">
+      <div class="container">
+        <h2 class="section-title" id="share-heading">Поделиться</h2>
+        <p class="section-lead">Расскажите друзьям о мастерской или подпишитесь на нас — показываем, как собираем букеты, и делимся скидками ко Дню матери.</p>
+
+        <div class="share-grid">
+          <a class="btn btn-secondary btn-block"
+             href="https://t.me/share/url?url=https%3A%2F%2Ffleur-mama.example%2F&amp;text=%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D1%8E%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D1%81%D0%BA%D1%83%D1%8E%20%C2%AB%D0%A4%D0%BB%D1%91%D1%80%C2%BB%3A%20%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B%20%D0%BA%D0%BE%20%D0%94%D0%BD%D1%8E%20%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%20%D1%81%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5%20%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%BE%D0%B9."
+             target="_blank" rel="noopener noreferrer"
+             data-event="social_click" data-event-network="telegram" data-event-action="share" data-event-location="thanks">Поделиться в Telegram</a>
+
+          <a class="btn btn-secondary btn-block"
+             href="https://wa.me/?text=%D0%A0%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D1%8E%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D1%81%D0%BA%D1%83%D1%8E%20%C2%AB%D0%A4%D0%BB%D1%91%D1%80%C2%BB%3A%20%D0%B1%D1%83%D0%BA%D0%B5%D1%82%D1%8B%20%D0%BA%D0%BE%20%D0%94%D0%BD%D1%8E%20%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%20%D1%81%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%BE%D0%B9%20%D0%BF%D0%BE%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5%20%D0%B8%20%D1%84%D0%BE%D1%82%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%BE%D0%B9.%20https%3A%2F%2Ffleur-mama.example%2F"
+             target="_blank" rel="noopener noreferrer"
+             data-event="social_click" data-event-network="whatsapp" data-event-action="share" data-event-location="thanks">Поделиться в WhatsApp</a>
+
+          <a class="btn btn-secondary btn-block"
+             href="https://instagram.com/fleur_mama"
+             target="_blank" rel="noopener noreferrer"
+             data-event="social_click" data-event-network="instagram" data-event-action="follow" data-event-location="thanks">Подписаться в Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Возврат в каталог ===== -->
+    <section class="section" aria-labelledby="thanks-cta-heading">
+      <div class="container text-center">
+        <h2 class="section-title" id="thanks-cta-heading">Хотите порадовать кого-то ещё?</h2>
+        <p class="section-lead" style="margin-inline: auto;">В каталоге больше двадцати готовых букетов — от скромных монобукетов до пышных композиций в шляпной коробке.</p>
+        <a class="btn btn-primary" href="catalog.html"
+           data-event="cta_click" data-event-label="thanks_catalog" data-event-location="thanks">Вернуться в каталог</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Подвал ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">Мастерская «Флёр»</p>
+          <p>Собираем букеты вручную и привозим их по Москве. Ко Дню матери работаем без выходных.</p>
+        </div>
+
+        <div>
+          <p class="footer-title">Разделы</p>
+          <ul class="footer-list">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="builder.html">Конструктор букетов</a></li>
+            <li><a href="delivery.html">Доставка и оплата</a></li>
+            <li><a href="care.html">Уход за цветами</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-title">Контакты</p>
+          <address>
+            <ul class="footer-list">
+              <li><a href="tel:+74951234567" data-event="contact_click" data-event-method="phone">+7 (495) 123-45-67</a></li>
+              <li><a href="mailto:hello@fleur-mama.example" data-event="contact_click" data-event-method="email">hello@fleur-mama.example</a></li>
+              <li>Москва, ул. Садовая-Кудринская, 14, строение 2</li>
+            </ul>
+          </address>
+        </div>
+
+        <div>
+          <p class="footer-title">Мы в соцсетях</p>
+          <ul class="footer-list">
+            <li><a href="https://t.me/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="telegram">Telegram</a></li>
+            <li><a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="whatsapp">WhatsApp</a></li>
+            <li><a href="https://instagram.com/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-current-year>2026</span> Мастерская «Флёр». Все права защищены.</p>
+        <p>
+          <a href="privacy.html">Политика конфиденциальности</a>
+          ·
+          <a href="404.html">Проверить страницу 404</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Номер заказа из адресной строки: thanks.html?order=M-2026-1234 */
+    (function () {
+      'use strict';
+
+      const DEFAULT_ORDER = 'M-2026-0001';
+      const target = document.getElementById('order-number');
+      if (!target) {
+        return;
+      }
+
+      let value = DEFAULT_ORDER;
+      try {
+        const raw = (new URLSearchParams(window.location.search).get('order') || '').trim();
+        // Допускаем только латиницу, цифры и дефис — страница не показывает чужую разметку
+        if (/^[A-Za-z0-9-]{3,24}$/.test(raw)) {
+          value = raw;
+        }
+      } catch (e) {
+        value = DEFAULT_ORDER;
+      }
+
+      target.textContent = value;
+    })();
+  </script>
+</body>
+</html>
