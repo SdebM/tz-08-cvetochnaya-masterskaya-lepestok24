@@ -1397,3 +1397,179 @@ select.form-control { appearance: auto; }
   .filter-actions { margin-top: var(--space-5); }
   .filter-actions .btn { width: 100%; }
 }
+
+/* ==========================================================================
+   Конструктор (builder.html)
+   Мобильный вид: колонки друг под другом, панель итога липнет к низу экрана.
+   .builder-side на мобильных «растворяется» (display: contents), чтобы
+   .order-bar стал прямым потомком .builder-layout и мог липнуть к низу.
+   ========================================================================== */
+.builder-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.builder-layout > * { min-width: 0; }
+
+.builder-side { display: contents; }
+
+.panel-title {
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-h3);
+}
+
+.flower-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.flower-card {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.flower-card > * { min-width: 0; }
+
+.flower-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.flower-icon-rose { background: #fbe0e4; }
+.flower-icon-peony { background: #f8d7e2; }
+.flower-icon-tulip { background: #fde6ef; }
+.flower-icon-chrysanthemum { background: #fff4c9; }
+.flower-icon-gerbera { background: #ffe3cc; }
+
+.flower-name { font-size: var(--fs-lead); }
+
+.flower-price {
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}
+
+.flower-controls {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.flower-sum {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  white-space: nowrap;
+}
+
+/* Степпер: дополнения к .qty */
+.qty input {
+  width: 52px;
+  height: var(--tap);
+  padding: 0;
+  font-size: 1rem; /* 16px, чтобы iOS не увеличивал страницу */
+  outline: none;
+}
+
+.qty:focus-within { border-color: var(--color-primary); }
+.qty button:focus-visible { outline-offset: -4px; }
+
+.qty button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.builder-panel {
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.packaging-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+.choice-card .choice-name { font-weight: 600; }
+
+.choice-card .choice-price {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  white-space: nowrap;
+}
+
+.summary-box .panel-title { margin-bottom: var(--space-2); }
+
+.order-bar {
+  position: sticky;
+  bottom: var(--space-2);
+  z-index: 50;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: 0 -4px 24px rgba(58, 42, 48, 0.18);
+}
+
+.order-total {
+  margin-bottom: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-primary-dark);
+}
+
+.order-hint {
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-warning);
+}
+
+@media (min-width: 768px) {
+  .flower-grid { grid-template-columns: repeat(2, 1fr); }
+  .packaging-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .builder-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: var(--space-6);
+    align-items: start;
+  }
+
+  .builder-side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    position: sticky;
+    top: calc(var(--header-h) + var(--space-4));
+    max-height: calc(100vh - var(--header-h) - var(--space-5));
+    overflow-y: auto;
+  }
+
+  .packaging-list { grid-template-columns: 1fr; }
+
+  .order-bar {
+    position: static;
+    box-shadow: var(--shadow-sm);
+  }
+}

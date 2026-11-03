@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Конструктор букета — соберите свой букет ко Дню матери</title>
+  <meta name="description" content="Соберите свой букет ко Дню матери: выберите розы, пионы, тюльпаны, хризантемы или герберы, добавьте упаковку и сразу увидите итоговую цену. Доставка по Москве.">
+  <meta name="theme-color" content="#b3124f">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Мастерская «Флёр»">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Конструктор букета — соберите свой букет ко Дню матери">
+  <meta property="og:description" content="Выберите цветы и упаковку, посмотрите цену в реальном времени и закажите авторский букет с доставкой по Москве.">
+  <meta property="og:image" content="https://fleur-mama.example/img/og-builder.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Флорист собирает букет из роз, пионов и тюльпанов на рабочем столе мастерской">
+  <meta property="og:url" content="https://fleur-mama.example/builder.html">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/analytics.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/builder.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ===== Шапка ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Мастерская «Флёр» — на главную">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <circle cx="16" cy="16" r="15" fill="#f8d7e2"/>
+          <g fill="#b3124f">
+            <circle cx="16" cy="9" r="4.5"/>
+            <circle cx="22.5" cy="14" r="4.5"/>
+            <circle cx="20" cy="21.5" r="4.5"/>
+            <circle cx="12" cy="21.5" r="4.5"/>
+            <circle cx="9.5" cy="14" r="4.5"/>
+          </g>
+          <circle cx="16" cy="16" r="3.5" fill="#fff8f5"/>
+        </svg>
+        <span>Флёр</span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span class="burger-line"></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+        <ul class="menu">
+          <li><a class="menu-link" href="index.html">Главная</a></li>
+          <li><a class="menu-link" href="catalog.html">Каталог</a></li>
+          <li><a class="menu-link active" href="builder.html" aria-current="page">Конструктор</a></li>
+          <li><a class="menu-link" href="delivery.html">Доставка</a></li>
+          <li><a class="menu-link" href="care.html">Уход</a></li>
+          <li><a class="menu-link" href="contacts.html">Заказать</a></li>
+          <li><a class="menu-link" href="thanks.html">Спасибо</a></li>
+          <li><a class="menu-link" href="privacy.html">Политика</a></li>
+        </ul>
+        <a class="btn btn-primary header-cta" href="contacts.html"
+           data-event="cta_click" data-event-label="header_order" data-event-location="header">Заказать</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Заголовок страницы ===== -->
+    <section class="page-header" aria-labelledby="builder-title">
+      <div class="container">
+        <ol class="breadcrumbs" aria-label="Хлебные крошки">
+          <li><a href="index.html">Главная</a></li>
+          <li aria-current="page">Конструктор</li>
+        </ol>
+        <h1 id="builder-title">Соберите свой букет</h1>
+        <p class="lead mt-2">Выберите цветы и упаковку — цена пересчитается сразу. Флорист соберёт букет вручную и пришлёт фото перед отправкой.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Конструктор букета">
+      <div class="container">
+
+        <noscript>
+          <div class="alert alert-warning mb-5">Конструктор работает с включённым JavaScript. Включите его в настройках браузера или позвоните нам: <a href="tel:+74951234567">+7 (495) 123-45-67</a> — флорист соберёт букет по вашему описанию.</div>
+        </noscript>
+
+        <div class="builder-layout">
+
+          <!-- ===== Левая колонка: цветы ===== -->
+          <div class="builder-flowers">
+            <h2 class="panel-title">1. Выберите цветы</h2>
+            <p class="text-muted mb-4">Цена указана за один цветок. Количество можно менять кнопками или вписать вручную — до 99 штук каждого вида.</p>
+
+            <div class="flower-grid" id="flower-grid">
+
+              <article class="flower-card" data-flower="roses">
+                <span class="flower-icon flower-icon-rose" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" width="40" height="40">
+                    <circle cx="32" cy="32" r="22" fill="#c0182f"/>
+                    <circle cx="32" cy="32" r="15" fill="#a50f28"/>
+                    <path d="M32 32c-6-2-7-9 0-10 8 0 10 9 3 12-5 2-10-1-10-6" fill="none" stroke="#e8667b" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="3" fill="#e8667b"/>
+                  </svg>
+                </span>
+                <div class="flower-info">
+                  <h3 class="flower-name" id="flower-roses-name">Розы</h3>
+                  <p class="flower-price">150&nbsp;₽ за штуку</p>
+                </div>
+                <div class="flower-controls">
+                  <div class="qty" role="group" aria-labelledby="flower-roses-name">
+                    <button type="button" data-qty-minus aria-label="Убавить: розы" disabled>−</button>
+                    <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" value="0" data-qty-input aria-label="Количество: розы">
+                    <button type="button" data-qty-plus aria-label="Добавить: розы">+</button>
+                  </div>
+                  <p class="flower-sum" data-line-sum>0&nbsp;₽</p>
+                </div>
+              </article>
+
+              <article class="flower-card" data-flower="peonies">
+                <span class="flower-icon flower-icon-peony" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" width="40" height="40">
+                    <g fill="#f2a1bd">
+                      <circle cx="32" cy="17" r="12"/>
+                      <circle cx="47" cy="28" r="12"/>
+                      <circle cx="41" cy="46" r="12"/>
+                      <circle cx="23" cy="46" r="12"/>
+                      <circle cx="17" cy="28" r="12"/>
+                    </g>
+                    <circle cx="32" cy="34" r="12" fill="#e87aa0"/>
+                    <circle cx="32" cy="34" r="6" fill="#fbd0df"/>
+                  </svg>
+                </span>
+                <div class="flower-info">
+                  <h3 class="flower-name" id="flower-peonies-name">Пионы</h3>
+                  <p class="flower-price">350&nbsp;₽ за штуку</p>
+                </div>
+                <div class="flower-controls">
+                  <div class="qty" role="group" aria-labelledby="flower-peonies-name">
+                    <button type="button" data-qty-minus aria-label="Убавить: пионы" disabled>−</button>
+                    <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" value="0" data-qty-input aria-label="Количество: пионы">
+                    <button type="button" data-qty-plus aria-label="Добавить: пионы">+</button>
+                  </div>
+                  <p class="flower-sum" data-line-sum>0&nbsp;₽</p>
+                </div>
+              </article>
+
+              <article class="flower-card" data-flower="tulips">
+                <span class="flower-icon flower-icon-tulip" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" width="40" height="40">
+                    <path d="M32 40v20" stroke="#4d7a58" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M32 54c8-2 12-8 12-14-7 1-11 6-12 14z" fill="#5f8a6b"/>
+                    <path d="M16 12l9 11 7-13 7 13 9-11c3 20-2 36-16 36S13 32 16 12z" fill="#e9548c"/>
+                  </svg>
+                </span>
+                <div class="flower-info">
+                  <h3 class="flower-name" id="flower-tulips-name">Тюльпаны</h3>
+                  <p class="flower-price">120&nbsp;₽ за штуку</p>
+                </div>
+                <div class="flower-controls">
+                  <div class="qty" role="group" aria-labelledby="flower-tulips-name">
+                    <button type="button" data-qty-minus aria-label="Убавить: тюльпаны" disabled>−</button>
+                    <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" value="0" data-qty-input aria-label="Количество: тюльпаны">
+                    <button type="button" data-qty-plus aria-label="Добавить: тюльпаны">+</button>
+                  </div>
+                  <p class="flower-sum" data-line-sum>0&nbsp;₽</p>
+                </div>
+              </article>
+
+              <article class="flower-card" data-flower="chrysanthemums">
+                <span class="flower-icon flower-icon-chrysanthemum" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" width="40" height="40">
+                    <g fill="#f5c518">
+                      <ellipse cx="32" cy="16" rx="4" ry="12"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(36 32 32)"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(72 32 32)"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(108 32 32)"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(144 32 32)"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(180 32 32)"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(216 32 32)"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(252 32 32)"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(288 32 32)"/>
+                      <ellipse cx="32" cy="16" rx="4" ry="12" transform="rotate(324 32 32)"/>
+                    </g>
+                    <circle cx="32" cy="32" r="7" fill="#e0a800"/>
+                  </svg>
+                </span>
+                <div class="flower-info">
+                  <h3 class="flower-name" id="flower-chrysanthemums-name">Хризантемы</h3>
+                  <p class="flower-price">90&nbsp;₽ за штуку</p>
+                </div>
+                <div class="flower-controls">
+                  <div class="qty" role="group" aria-labelledby="flower-chrysanthemums-name">
+                    <button type="button" data-qty-minus aria-label="Убавить: хризантемы" disabled>−</button>
+                    <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" value="0" data-qty-input aria-label="Количество: хризантемы">
+                    <button type="button" data-qty-plus aria-label="Добавить: хризантемы">+</button>
+                  </div>
+                  <p class="flower-sum" data-line-sum>0&nbsp;₽</p>
+                </div>
+              </article>
+
+              <article class="flower-card" data-flower="gerberas">
+                <span class="flower-icon flower-icon-gerbera" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" width="40" height="40">
+                    <g fill="#f08a24">
+                      <ellipse cx="32" cy="15" rx="6" ry="13"/>
+                      <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(45 32 32)"/>
+                      <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(90 32 32)"/>
+                      <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(135 32 32)"/>
+                      <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(180 32 32)"/>
+                      <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(225 32 32)"/>
+                      <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(270 32 32)"/>
+                      <ellipse cx="32" cy="15" rx="6" ry="13" transform="rotate(315 32 32)"/>
+                    </g>
+                    <circle cx="32" cy="32" r="8" fill="#5a3418"/>
+                    <circle cx="32" cy="32" r="3" fill="#8a5a2c"/>
+                  </svg>
+                </span>
+                <div class="flower-info">
+                  <h3 class="flower-name" id="flower-gerberas-name">Герберы</h3>
+                  <p class="flower-price">130&nbsp;₽ за штуку</p>
+                </div>
+                <div class="flower-controls">
+                  <div class="qty" role="group" aria-labelledby="flower-gerberas-name">
+                    <button type="button" data-qty-minus aria-label="Убавить: герберы" disabled>−</button>
+                    <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" value="0" data-qty-input aria-label="Количество: герберы">
+                    <button type="button" data-qty-plus aria-label="Добавить: герберы">+</button>
+                  </div>
+                  <p class="flower-sum" data-line-sum>0&nbsp;₽</p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- ===== Правая колонка: упаковка, состав, итог ===== -->
+          <div class="builder-side">
+
+            <section class="builder-panel" aria-labelledby="packaging-title">
+              <h2 class="panel-title" id="packaging-title">2. Выберите упаковку</h2>
+              <fieldset class="packaging-list" id="packaging-list">
+                <legend class="visually-hidden">Упаковка букета</legend>
+                <label class="choice-card radio">
+                  <input type="radio" name="packaging" value="kraft" checked>
+                  <span class="choice-name">Крафт-бумага</span>
+                  <span class="choice-price">0&nbsp;₽</span>
+                </label>
+                <label class="choice-card radio">
+                  <input type="radio" name="packaging" value="film">
+                  <span class="choice-name">Плёнка</span>
+                  <span class="choice-price">200&nbsp;₽</span>
+                </label>
+                <label class="choice-card radio">
+                  <input type="radio" name="packaging" value="box">
+                  <span class="choice-name">Коробка</span>
+                  <span class="choice-price">500&nbsp;₽</span>
+                </label>
+                <label class="choice-card radio">
+                  <input type="radio" name="packaging" value="hatbox">
+                  <span class="choice-name">Шляпная коробка</span>
+                  <span class="choice-price">900&nbsp;₽</span>
+                </label>
+              </fieldset>
+            </section>
+
+            <section class="summary-box" aria-labelledby="summary-title">
+              <h2 class="panel-title" id="summary-title">Состав букета</h2>
+              <div id="summary-rows">
+                <p class="text-muted">Добавьте цветы, и здесь появится состав букета.</p>
+              </div>
+            </section>
+
+            <form class="order-bar" id="order-form" action="contacts.html" method="get">
+              <p class="order-total" role="status" aria-live="polite">Итого: <span id="total-value">0&nbsp;₽</span></p>
+              <p class="order-hint" id="order-hint">Добавьте хотя бы один цветок</p>
+
+              <!-- Эти поля уходят в contacts.html параметрами адреса -->
+              <input type="hidden" name="item_id" value="CUSTOM">
+              <input type="hidden" name="item_name" value="Свой букет">
+              <input type="hidden" name="price" id="order-price" value="0">
+              <input type="hidden" name="composition" id="order-composition" value="">
+
+              <button class="btn btn-primary btn-block" type="submit" id="order-btn" disabled aria-describedby="order-hint"
+                      data-event="cta_click" data-event-label="builder_order" data-event-location="builder">Заказать букет</button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Подвал ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">Мастерская «Флёр»</p>
+          <p>Собираем букеты вручную и привозим их по Москве. Ко Дню матери работаем без выходных.</p>
+        </div>
+
+        <div>
+          <p class="footer-title">Разделы</p>
+          <ul class="footer-list">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="builder.html">Конструктор букетов</a></li>
+            <li><a href="delivery.html">Доставка и оплата</a></li>
+            <li><a href="care.html">Уход за цветами</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-title">Контакты</p>
+          <address>
+            <ul class="footer-list">
+              <li><a href="tel:+74951234567" data-event="contact_click" data-event-method="phone">+7 (495) 123-45-67</a></li>
+              <li><a href="mailto:hello@fleur-mama.example" data-event="contact_click" data-event-method="email">hello@fleur-mama.example</a></li>
+              <li>Москва, ул. Садовая-Кудринская, 14, строение 2</li>
+            </ul>
+          </address>
+        </div>
+
+        <div>
+          <p class="footer-title">Мы в соцсетях</p>
+          <ul class="footer-list">
+            <li><a href="https://t.me/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="telegram">Telegram</a></li>
+            <li><a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="whatsapp">WhatsApp</a></li>
+            <li><a href="https://instagram.com/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-current-year>2026</span> Мастерская «Флёр». Все права защищены.</p>
+        <p>
+          <a href="privacy.html">Политика конфиденциальности</a>
+          ·
+          <a href="404.html">Проверить страницу 404</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
