@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа — доставка букетов ко Дню матери</title>
+  <meta name="description" content="Оформите заказ на букет ко Дню матери: укажите адрес, дату и время доставки по Москве. Подтвердим заказ по телефону и пришлём фото букета перед отправкой.">
+  <meta name="theme-color" content="#b3124f">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Мастерская «Флёр»">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Оформление заказа — доставка букетов ко Дню матери">
+  <meta property="og:description" content="Адрес, дата и время доставки — и букет для мамы в пути. Подтверждаем заказ по телефону и присылаем фото перед отправкой.">
+  <meta property="og:image" content="https://fleur-mama.example/img/og-contacts.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Флорист упаковывает букет в мастерской перед отправкой курьеру">
+  <meta property="og:url" content="https://fleur-mama.example/contacts.html">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/analytics.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- ===== Шапка ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Мастерская «Флёр» — на главную">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+          <circle cx="16" cy="16" r="15" fill="#f8d7e2"/>
+          <g fill="#b3124f">
+            <circle cx="16" cy="9" r="4.5"/>
+            <circle cx="22.5" cy="14" r="4.5"/>
+            <circle cx="20" cy="21.5" r="4.5"/>
+            <circle cx="12" cy="21.5" r="4.5"/>
+            <circle cx="9.5" cy="14" r="4.5"/>
+          </g>
+          <circle cx="16" cy="16" r="3.5" fill="#fff8f5"/>
+        </svg>
+        <span>Флёр</span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+        <span class="burger-line"></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+        <ul class="menu">
+          <li><a class="menu-link" href="index.html">Главная</a></li>
+          <li><a class="menu-link" href="catalog.html">Каталог</a></li>
+          <li><a class="menu-link" href="builder.html">Конструктор</a></li>
+          <li><a class="menu-link" href="delivery.html">Доставка</a></li>
+          <li><a class="menu-link" href="care.html">Уход</a></li>
+          <li><a class="menu-link active" href="contacts.html" aria-current="page">Заказать</a></li>
+          <li><a class="menu-link" href="thanks.html">Спасибо</a></li>
+          <li><a class="menu-link" href="privacy.html">Политика</a></li>
+        </ul>
+        <a class="btn btn-primary header-cta" href="contacts.html"
+           data-event="cta_click" data-event-label="header_order" data-event-location="header">Заказать</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Заголовок страницы ===== -->
+    <section class="page-header" aria-labelledby="order-title">
+      <div class="container">
+        <ol class="breadcrumbs" aria-label="Хлебные крошки">
+          <li><a href="index.html">Главная</a></li>
+          <li aria-current="page">Заказать</li>
+        </ol>
+        <h1 id="order-title">Оформление заказа</h1>
+        <p class="lead mt-2">Оставьте контакты и адрес доставки. Флорист позвонит в течение 15 минут, подтвердит заказ и пришлёт фото готового букета перед отправкой.</p>
+      </div>
+    </section>
+
+    <!-- ===== Форма заказа ===== -->
+    <section class="section" aria-labelledby="form-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="form-title">Данные для заказа</h2>
+
+        <noscript>
+          <div class="alert alert-warning mb-5">Форма работает с включённым JavaScript. Включите его в настройках браузера или закажите по телефону: <a href="tel:+74951234567">+7 (495) 123-45-67</a>.</div>
+        </noscript>
+
+        <div class="order-layout">
+
+          <form class="form order-form" id="order-form" novalidate aria-labelledby="form-title">
+            <p class="form-note">Поля, отмеченные звёздочкой <span class="req-star" aria-hidden="true">*</span>, обязательны для заполнения.</p>
+
+            <div class="alert alert-error" id="form-status" role="alert" hidden></div>
+
+            <!-- Скрытые поля: заполняются из адресной строки (form.js) -->
+            <input type="hidden" name="item_id" value="">
+            <input type="hidden" name="item_name" value="">
+            <input type="hidden" name="price" value="">
+            <input type="hidden" name="composition" value="">
+            <input type="hidden" name="delivery_method" value="">
+            <input type="hidden" name="delivery_zone" value="">
+            <input type="hidden" name="delivery_urgency" value="">
+            <input type="hidden" name="delivery_price" value="">
+            <input type="hidden" name="subscription" value="">
+
+            <fieldset class="form-section">
+              <legend>Ваши контакты</legend>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="name">Ваше имя <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" type="text" id="name" name="name" autocomplete="name" required
+                         placeholder="Например, Анна" aria-invalid="false" aria-describedby="name-error">
+                  <p class="form-error" id="name-error" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="phone">Телефон <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" required
+                         placeholder="+7 (___) ___-__-__" aria-invalid="false" aria-describedby="phone-hint phone-error">
+                  <p class="form-hint" id="phone-hint">Позвоним, чтобы подтвердить заказ</p>
+                  <p class="form-error" id="phone-error" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group span-2">
+                  <label class="form-label" for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" type="email" id="email" name="email" autocomplete="email" required
+                         placeholder="name@example.ru" aria-invalid="false" aria-describedby="email-hint email-error">
+                  <p class="form-hint" id="email-hint">Пришлём на него чек и фото букета</p>
+                  <p class="form-error" id="email-error" aria-live="polite"></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend>Доставка</legend>
+              <div class="form-grid">
+                <div class="form-group span-2">
+                  <label class="form-label" for="address">Адрес доставки <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" type="text" id="address" name="address" autocomplete="street-address" required
+                         placeholder="Улица, дом, квартира, подъезд, этаж" aria-invalid="false" aria-describedby="address-error">
+                  <p class="form-error" id="address-error" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="date">Дата доставки <span class="req" aria-hidden="true">*</span></label>
+                  <input class="form-control" type="date" id="date" name="date" required
+                         aria-invalid="false" aria-describedby="date-hint date-error">
+                  <p class="form-hint" id="date-hint">Со следующего дня. На сегодня закажите по телефону <a href="tel:+74951234567" data-event="contact_click" data-event-method="phone">+7 (495) 123-45-67</a></p>
+                  <p class="form-error" id="date-error" aria-live="polite"></p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="time">Время доставки</label>
+                  <select class="form-control" id="time" name="time">
+                    <option value="10-14">10:00–14:00</option>
+                    <option value="14-18">14:00–18:00</option>
+                    <option value="18-22">18:00–22:00</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend>Получатель и пожелания</legend>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="recipient-name">Имя получателя <span class="form-optional">(необязательно)</span></label>
+                  <input class="form-control" type="text" id="recipient-name" name="recipient_name" autocomplete="off"
+                         placeholder="Например, Татьяна Ивановна">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="recipient-phone">Телефон получателя <span class="form-optional">(необязательно)</span></label>
+                  <input class="form-control" type="tel" id="recipient-phone" name="recipient_phone" inputmode="tel" autocomplete="off"
+                         placeholder="Курьер позвонит перед приездом">
+                </div>
+
+                <div class="form-group span-2">
+                  <label class="form-label" for="comment">Комментарий <span class="form-optional">(необязательно)</span></label>
+                  <textarea class="form-control" id="comment" name="comment" rows="4" maxlength="500"
+                            placeholder="Текст открытки, пожелания к букету, код домофона, анонимная доставка"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-group consent-group">
+              <label class="checkbox" for="consent">
+                <input type="checkbox" id="consent" name="consent" autocomplete="off" required
+                       aria-invalid="false" aria-describedby="consent-error">
+                <span>Согласен с <a href="privacy.html" target="_blank" rel="noopener">обработкой персональных данных</a> <span class="req" aria-hidden="true">*</span></span>
+              </label>
+              <p class="form-error" id="consent-error" aria-live="polite"></p>
+            </div>
+
+            <div>
+              <button class="btn btn-primary btn-block" type="submit" id="submit-btn">Оформить заказ</button>
+              <p class="form-note mt-2">Оплата — картой онлайн или курьеру при получении. Заказ можно изменить или отменить по телефону до сборки букета.</p>
+            </div>
+          </form>
+
+          <aside class="order-aside" aria-labelledby="order-summary-title">
+            <div class="summary-box" id="order-summary">
+              <h2 class="panel-title" id="order-summary-title">Ваш заказ</h2>
+              <div id="order-summary-body">
+                <p class="text-muted">Букет пока не выбран. Подберите готовый в каталоге или соберите свой — либо опишите пожелания в комментарии, и флорист предложит варианты.</p>
+                <p class="cluster mt-4">
+                  <a class="btn btn-secondary btn-sm" href="catalog.html"
+                     data-event="cta_click" data-event-label="order_catalog" data-event-location="order_summary">Открыть каталог</a>
+                  <a class="btn btn-secondary btn-sm" href="builder.html"
+                     data-event="cta_click" data-event-label="order_builder" data-event-location="order_summary">Собрать свой</a>
+                </p>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Связаться с нами ===== -->
+    <section class="section section-alt" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="section-title" id="contact-heading">Связаться с нами</h2>
+        <p class="section-lead">Не хотите заполнять форму или нужен срочный букет? Позвоните или напишите — ответим в рабочее время с 9:00 до 21:00.</p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <p class="contact-label">Телефон</p>
+            <p class="contact-value"><a href="tel:+74951234567" data-event="contact_click" data-event-method="phone" data-event-location="contacts">+7 (495) 123-45-67</a></p>
+            <p class="text-small text-muted">Ежедневно с 9:00 до 21:00. Принимаем срочные заказы на сегодня.</p>
+          </div>
+
+          <div class="contact-card">
+            <p class="contact-label">E-mail</p>
+            <p class="contact-value"><a href="mailto:hello@fleur-mama.example" data-event="contact_click" data-event-method="email" data-event-location="contacts">hello@fleur-mama.example</a></p>
+            <p class="text-small text-muted">Для вопросов по заказам и подписке для офиса. Отвечаем в течение дня.</p>
+          </div>
+
+          <div class="contact-card">
+            <p class="contact-label">Telegram</p>
+            <p class="text-small text-muted">Напишите нам и отправьте фото букета, который вам понравился, — подберём похожий.</p>
+            <a class="btn btn-secondary" href="https://t.me/fleur_mama" target="_blank" rel="noopener noreferrer"
+               data-event="messenger_click" data-event-messenger="telegram" data-event-location="contacts">Написать в Telegram</a>
+          </div>
+
+          <div class="contact-card">
+            <p class="contact-label">WhatsApp</p>
+            <p class="text-small text-muted">Ответим в течение 10 минут и пришлём фото готового букета перед отправкой.</p>
+            <a class="btn btn-secondary" href="https://wa.me/74951234567?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%B1%D1%83%D0%BA%D0%B5%D1%82%20%D0%BA%D0%BE%20%D0%94%D0%BD%D1%8E%20%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8."
+               target="_blank" rel="noopener noreferrer"
+               data-event="messenger_click" data-event-messenger="whatsapp" data-event-location="contacts">Написать в WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Мастерская ===== -->
+    <section class="section" aria-labelledby="workshop-heading">
+      <div class="container split">
+        <div>
+          <h2 class="section-title" id="workshop-heading">Мастерская</h2>
+          <p class="section-lead">Здесь мы собираем букеты и отсюда отправляем курьеров. Можно заехать за заказом самим.</p>
+          <dl class="workshop-list">
+            <dt>Адрес</dt>
+            <dd>Москва, ул. Садовая-Кудринская, 14, строение 2</dd>
+            <dt>Часы работы</dt>
+            <dd>Ежедневно с 9:00 до 21:00, ко Дню матери — без выходных</dd>
+            <dt>Самовывоз</dt>
+            <dd>Букет будет готов через 2 часа после подтверждения заказа. Мы позвоним, когда можно забирать.</dd>
+          </dl>
+        </div>
+
+        <div class="map" data-event="map_open" data-event-location="contacts">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=37.591%2C55.764&amp;z=16&amp;pt=37.591%2C55.764%2Cpm2rdm"
+                  title="Карта: мастерская «Флёр» на Садовой-Кудринской улице"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="-1"></iframe>
+          <a class="map-link" href="https://yandex.ru/maps/?ll=37.591%2C55.764&amp;z=16&amp;pt=37.591%2C55.764%2Cpm2rdm"
+             target="_blank" rel="noopener noreferrer" aria-label="Открыть карту с мастерской «Флёр» в новой вкладке">
+            <span class="map-link-label" aria-hidden="true">Открыть карту</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Подвал ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">Мастерская «Флёр»</p>
+          <p>Собираем букеты вручную и привозим их по Москве. Ко Дню матери работаем без выходных.</p>
+        </div>
+
+        <div>
+          <p class="footer-title">Разделы</p>
+          <ul class="footer-list">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="builder.html">Конструктор букетов</a></li>
+            <li><a href="delivery.html">Доставка и оплата</a></li>
+            <li><a href="care.html">Уход за цветами</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-title">Контакты</p>
+          <address>
+            <ul class="footer-list">
+              <li><a href="tel:+74951234567" data-event="contact_click" data-event-method="phone">+7 (495) 123-45-67</a></li>
+              <li><a href="mailto:hello@fleur-mama.example" data-event="contact_click" data-event-method="email">hello@fleur-mama.example</a></li>
+              <li>Москва, ул. Садовая-Кудринская, 14, строение 2</li>
+            </ul>
+          </address>
+        </div>
+
+        <div>
+          <p class="footer-title">Мы в соцсетях</p>
+          <ul class="footer-list">
+            <li><a href="https://t.me/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="telegram">Telegram</a></li>
+            <li><a href="https://wa.me/74951234567" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="whatsapp">WhatsApp</a></li>
+            <li><a href="https://instagram.com/fleur_mama" target="_blank" rel="noopener noreferrer"
+                   data-event="social_click" data-event-network="instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-current-year>2026</span> Мастерская «Флёр». Все права защищены.</p>
+        <p>
+          <a href="privacy.html">Политика конфиденциальности</a>
+          ·
+          <a href="404.html">Проверить страницу 404</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

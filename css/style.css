@@ -1853,3 +1853,190 @@ address { font-style: normal; }
 @media (min-width: 1280px) {
   .promo-value { font-size: 3.5rem; }
 }
+
+/* ==========================================================================
+   Оформление заказа (contacts.html)
+   ========================================================================== */
+.order-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+/* На мобильных сводка заказа идёт перед формой */
+.order-aside { order: -1; min-width: 0; }
+
+.order-form { gap: var(--space-5); min-width: 0; }
+
+.form-note {
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}
+
+.req-star,
+.form-label .req { color: var(--color-error); }
+
+.form-optional {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.form-section {
+  min-width: 0;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.form-section legend {
+  padding: 0 var(--space-2);
+  font-family: var(--font-heading);
+  font-size: var(--fs-lead);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.form-grid > * { min-width: 0; }
+
+/* Блок ошибки всегда в разметке, чтобы скринридер озвучивал появление текста */
+.order-form .form-group { gap: 0; }
+.order-form .form-label { margin-bottom: var(--space-1); }
+.order-form .form-hint { margin-top: var(--space-1); }
+.order-form .form-error { display: block; }
+.order-form .form-error:not(:empty) { margin-top: var(--space-1); }
+
+.form-hint a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  font-weight: 600;
+}
+
+.checkbox input.is-invalid {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px var(--color-error-bg);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-card .btn { margin-top: auto; }
+
+.contact-label {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.contact-value a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  font-size: var(--fs-lead);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.workshop-list dt {
+  font-size: var(--fs-small);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.workshop-list dd {
+  margin: var(--space-1) 0 var(--space-4);
+}
+
+/* Карта: iframe только показывает, а клик по всей карте открывает её в новой вкладке */
+.map {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+.map-link {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: var(--space-3);
+  text-decoration: none;
+}
+
+.map-link:focus-visible { outline-offset: -4px; }
+
+.map-link-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding: 0 var(--space-4);
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+.map-link:hover .map-link-label { background: var(--color-primary-dark); }
+
+@media (min-width: 768px) {
+  .form-section { padding: var(--space-5); }
+  .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-grid .span-2 { grid-column: 1 / -1; }
+  .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1280px) {
+  .order-layout {
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: var(--space-6);
+  }
+
+  .order-aside {
+    order: 0;
+    position: sticky;
+    top: calc(var(--header-h) + var(--space-4));
+  }
+
+  .contact-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
