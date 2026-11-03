@@ -1656,3 +1656,200 @@ select.form-control { appearance: auto; }
 
 /* Контакты в <address> без курсива (стиль браузера по умолчанию) */
 address { font-style: normal; }
+
+/* ==========================================================================
+   Уход за цветами (care.html)
+   ========================================================================== */
+.rule-list {
+  counter-reset: rule;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.rule {
+  counter-increment: rule;
+  position: relative;
+  min-width: 0;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Крупный номер правила в углу карточки */
+.rule::after {
+  content: counter(rule);
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-4);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary-soft);
+}
+
+.rule-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  padding-right: 32px;
+}
+
+.rule-head .feature-icon { flex-shrink: 0; }
+
+.rule-title {
+  min-width: 0;
+  font-size: var(--fs-lead);
+}
+
+.rule-text {
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}
+
+.care-card {
+  min-width: 0;
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 2px solid var(--color-primary-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.promo-code {
+  margin: var(--space-4) 0 var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius);
+  background: var(--color-surface-alt);
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--color-primary-dark);
+  user-select: all;
+}
+
+@media (min-width: 768px) {
+  .rule-list { grid-template-columns: repeat(2, 1fr); }
+  .rule:last-child { grid-column: 1 / -1; }
+  .promo-code { font-size: 2.75rem; }
+}
+
+@media (min-width: 1280px) {
+  .rule-list { grid-template-columns: repeat(4, 1fr); }
+  .rule:last-child { grid-column: span 2; }
+}
+
+/* ==========================================================================
+   Уход за букетом (care.html)
+   ========================================================================== */
+.care-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  counter-reset: rule;
+}
+
+.care-rule {
+  counter-increment: rule;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--space-4);
+  align-items: start;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.care-rule > * { min-width: 0; }
+
+.care-rule h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-lead);
+}
+
+.care-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.care-icon svg { width: 28px; height: 28px; }
+
+/* Номер правила на уголке иконки */
+.care-icon::after {
+  content: counter(rule);
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.memo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.promo-box {
+  padding: var(--space-5);
+  text-align: center;
+  background: var(--color-surface);
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius);
+}
+
+.promo-label {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+
+.promo-value {
+  margin: var(--space-2) 0;
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-dark);
+  user-select: all;
+}
+
+.promo-caption { color: var(--color-text); }
+
+@media (min-width: 768px) {
+  .care-list { grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+  .care-rule:last-child { grid-column: 1 / -1; }
+}
+
+@media (min-width: 1280px) {
+  .promo-value { font-size: 3.5rem; }
+}
